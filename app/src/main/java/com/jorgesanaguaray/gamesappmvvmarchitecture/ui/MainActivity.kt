@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity() {
             binding.mTextViewMessage.text = it
         }
 
-        mainViewModel.progressBarVisibility.observe(this) {
-            binding.mProgressBar.visibility = if (it) View.VISIBLE else View.GONE
-        }
-
         mainViewModel.recyclerViewVisibility.observe(this) {
             binding.mRecyclerView.visibility = if (it) View.VISIBLE else View.GONE
+        }
+
+        mainViewModel.progressBarVisibility.observe(this) {
+            binding.mProgressBar.visibility = if (it) View.VISIBLE else View.GONE
         }
 
         mainViewModel.textViewVisibility.observe(this) {

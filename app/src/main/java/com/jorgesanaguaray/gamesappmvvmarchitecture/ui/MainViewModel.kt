@@ -27,11 +27,11 @@ class MainViewModel @Inject constructor(
     private val _message = MutableLiveData<String>()
     val message: LiveData<String> get() = _message
 
-    private val _progressBarVisibility = MutableLiveData<Boolean>()
-    val progressBarVisibility: LiveData<Boolean> get() = _progressBarVisibility
-
     private val _recyclerViewVisibility = MutableLiveData<Boolean>()
     val recyclerViewVisibility: LiveData<Boolean> get() = _recyclerViewVisibility
+
+    private val _progressBarVisibility = MutableLiveData<Boolean>()
+    val progressBarVisibility: LiveData<Boolean> get() = _progressBarVisibility
 
     private val _textViewVisibility = MutableLiveData<Boolean>()
     val textViewVisibility: LiveData<Boolean> get() = _textViewVisibility
@@ -59,7 +59,7 @@ class MainViewModel @Inject constructor(
 
     }
 
-    fun getGamesFromDatabase() {
+    private fun getGamesFromDatabase() {
 
         viewModelScope.launch {
 
@@ -77,16 +77,16 @@ class MainViewModel @Inject constructor(
 
     }
 
-    private fun showProgressBar() {
-        _progressBarVisibility.value = true
-        _recyclerViewVisibility.value = false
-        _textViewVisibility.value = false
-    }
-
     private fun showRecyclerView() {
         _recyclerViewVisibility.value = true
         _textViewVisibility.value = false
         _progressBarVisibility.value = false
+    }
+
+    private fun showProgressBar() {
+        _progressBarVisibility.value = true
+        _recyclerViewVisibility.value = false
+        _textViewVisibility.value = false
     }
 
     private fun showTextView() {
