@@ -59,7 +59,7 @@ class MainViewModel @Inject constructor(
 
     }
 
-    private fun getGamesFromDatabase() {
+    fun getGamesFromDatabase() {
 
         viewModelScope.launch {
 
