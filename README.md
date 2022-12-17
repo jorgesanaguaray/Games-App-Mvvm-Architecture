@@ -38,4 +38,4 @@ An app that uses Retrofit to consume an API and stores the data locally using Ro
 
 [Tutorial on YouTube](https://youtu.be/ToS-yVfLqUI)
 
-![App Screenshot](https://pbs.twimg.com/media/FhUmE2bXkAQFhSE?format=jpg&name=large)
+![App Screenshot](https://pbs.twimg.com/media/FkN2eyZXEAEqIDu?format=jpg&name=large)
